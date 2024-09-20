@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RAGHAVA-HP.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Raghavendra Rao - Homepage</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="home"><a href="#about-me"> home</a></div>
+            <div class="skills"><a href="#technical-skills"> skills</a></div>
+            <div class="contacts"><a href="#social-media"> contacts</a></div>
+        </div>
+        <h1>Raghavendra Rao</h1>
+        
+    </header>
+
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>
+                I'm Raghavendra Rao, a 3rd-year Computer Science student at Kallam Haranadha Reddy Institute of Technology, driven by a passion for crafting intuitive and user-friendly web experiences that simplify complex problems and make technology accessible to everyone. My goal is to become a leading developer, dedicated to building innovative solutions that make a lasting impact on people's lives, and to continuously learn and grow in the ever-evolving field of technology. I'm excited to explore the endless possibilities that the world of tech has to offer, and to contribute my skills and knowledge to create a better future for all.
+            </p>
+        </section>
+
+        <section id="technical-skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>java</li>
+                
+            </ul>
+        </section>
+
+        <section id="interests-and-hobbies">
+            <h2>Interests and Hobbies</h2>
+            <ol>
+                <li>Web Development</li>
+                <li>Reading</li>
+                
+                <li>Photography</li>
+                <li>Travelling</li>
+                <li>Gaming</li>
+               <li>volley ball</li>
+                <li>Playing Cricket</li>
+            </ol>
+        </section>
+
+       
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>
+                Here is my educational background:
+            </p>
+            <ul>
+                <li>B.Tech in Computer Science, Kallam Haranadha Reddy Institute of Technology (2023-2026)</li>
+                <li>Diploma, Prakasam Engineering College (2020-2023)</li>
+                <li>SSC, ZP High School (2020)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Get in Touch:</h2>
+        <a href="mailto:raghavendraraonarne@gmail.com" style="color: #4CAF50; text-decoration: none;">raghavendraraonarne@gmail.com</a>
+        <div id="social-media">
+            <a href="https://www.facebook.com/your-facebook-profile" target="_blank" style="color: #3b5998;">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/your-instagram-profile" target="_blank" style="color: #e1306c;">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" style="color: #0077b5;">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+
+    
+    <script>
+
+
+
+
+
+// Smooth Scrolling
+document.querySelectorAll('#nav a').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').split('#')[1];
+    document.querySelector(`#${targetId}`).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Introduction Section Enhancement
+const readMoreButton = document.getElementById('read-more');
+const additionalDetails = document.getElementById('additional-details');
+
+readMoreButton.addEventListener('click', () => {
+  additionalDetails.style.display = additionalDetails.style.display === 'none' ? 'block' : 'none';
+  readMoreButton.textContent = additionalDetails.style.display === 'none' ? 'Read More' : 'Read Less';
+});
+
+// Projects Section Enhancement
+const viewDetailsButtons = document.querySelectorAll('.view-details');
+
+viewDetailsButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const projectDetails = button.nextElementSibling;
+    projectDetails.style.display = projectDetails.style.display === 'none' ? 'block' : 'none';
+    button.textContent = projectDetails.style.display === 'none' ? 'View Details' : 'Hide Details';
+  });
+});
+
+
+
+       </script> 
+  </body>      
+       
+</html>
